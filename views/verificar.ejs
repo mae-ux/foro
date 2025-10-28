@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificar Cuenta</title>
+  <link rel="stylesheet" href="css/crear.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="img/logo_santotomas1.png" alt="Santo Tomás">
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="form-box">
+      <h2>Verifica tu correo</h2>
+      <p>Ingresa tu correo y el código de verificación que recibiste</p>
+      <p>Valido solo por 2 Minutos</p>
+
+      <form action="/verificar" method="POST">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" value="<%= email %>" readonly required>
+
+        <label for="codigo">Código de verificación</label>
+        <input type="text" id="codigo" name="codigo" placeholder="Ingresa el código recibido" required>
+
+        <button type="submit" class="btn">Verificar Cuenta</button>
+      </form>
+
+      <!-- Mostrar mensajes de error -->
+      <% if (error) { %>
+        <p class="error" style="color:red; margin-top:10px;"><%= error %></p>
+      <% } %>
+
+      <p class="login-link">
+        ¿Ya verificaste tu cuenta o tienes cuenta? <a href="/login">Inicia sesión aquí</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    © 2025 Voces Tomasinas - Foro Institucional Santo Tomás
+  </footer>
+</body>
+</html>

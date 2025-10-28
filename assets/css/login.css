@@ -1,0 +1,145 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
+}
+
+body {
+  background: url('../img/biblioteca_fondo.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;              
+  background-color: #ffffff;       
+  border-bottom: 2px solid #006b4f;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+/* Logo */
+.logo img {
+  height: 55px; 
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.login-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 60px 70px;   
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 600px;         
+  max-width: 90%;       
+}
+
+.login-box h2 {
+  color: #003b2b;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #006b4f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #00513a;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.links a {
+  color: #006b4f;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+
+.footer {
+  background-color: #003b2b;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 15px;
+  color: #003b2b;
+}
+
+#modo-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #003b2b;
+}
+
+#modo-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Navbar móvil */
+@media (max-width: 767px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}

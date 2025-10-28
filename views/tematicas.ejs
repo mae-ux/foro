@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voces Tomasinas - Temáticas</title>
+  <link rel="stylesheet" href="css/tematicas.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="img/logo_santotomas1.png" alt="Santo Tomás" class="logo">
+    <nav class="navbar">
+      <a href="inicio.html">Inicio</a>
+      <a href="tematicas.html" class="active">Temáticas</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="actividades.html">Actividades DAE</a>
+      <a href="perfil.html">Mi Perfil</a>
+      <a href="login.html" class="logout">Cerrar sesión</a>
+    </nav>
+    <div class="header-right">
+    <button id="menu-btn" class="menu-btn">☰</button> <!-- botón hamburguesa -->
+  </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="overlay">
+      <h1>Temáticas</h1>
+      <p>Participa en conversaciones semanales y comparte tus ideas</p>
+    </div>
+  </section>
+
+  <!-- Contenido principal -->
+  <main class="main-content">
+    <!-- Tema activo -->
+    <section class="tema-activo">
+      <h2>Temática de la Semana: Creatividad y Emprendimiento</h2>
+      <p><strong>Moderación:</strong> Esta semana conversamos sobre creatividad y emprendimiento: ideas, proyectos y experiencias Tomasinas. ¡Comparte tu mirada!</p>
+    </section>
+
+    <!-- Comentarios -->
+    <section class="comentarios">
+      <h3>Comentarios</h3>
+
+      <article class="comentario">
+        <h4>Sofía Castro <span class="carrera">Psicopedagogía</span></h4>
+        <p>Este foro me ayudó a conectar con otros estudiantes y encontrar recursos útiles para mis estudios. Excelente iniciativa.</p>
+        <div class="acciones">
+          <button>👍 Me gusta (15)</button>
+          <button>↩ Responder</button>
+        </div>
+      </article>
+
+      <article class="comentario respuesta">
+        <h4>Benjamín Pérez <span class="carrera">Ingeniería Comercial</span></h4>
+        <p>Para validar ideas, me ha servido prototipar rápido y pedir feedback a la DAE y profesores.</p>
+        <div class="acciones">
+          <button>👍 Me gusta (7)</button>
+          <button>↩ Responder</button>
+        </div>
+      </article>
+
+      <article class="comentario">
+        <h4>Valentina Mora <span class="carrera">Trabajo Social</span></h4>
+        <p>¿Alguien ha usado metodologías ágiles en proyectos estudiantiles? ¿Qué les funcionó?</p>
+        <div class="acciones">
+          <button>👍 Me gusta (9)</button>
+          <button>↩ Responder</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- Editor de respuesta -->
+    <section class="editor">
+      <h3>Escribe tu respuesta</h3>
+      <textarea rows="4" placeholder="Participa con tu comentario..."></textarea>
+      <div class="editor-actions">
+        <button class="btn-primary">Publicar</button>
+      </div>
+    </section>
+
+    
+
+    <!-- Archivadas -->
+    <section class="archivadas">
+      <h3>🗂 Temáticas archivadas</h3>
+      <ul>
+        <li><a href="#">Semana 40 · Comunicación Efectiva</a></li>
+        <li><a href="#">Semana 39 · Liderazgo Estudiantil</a></li>
+        <li><a href="#">Semana 38 · Autorregulación del Estudio</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 Voces Tomasinas - Foro Institucional Santo Tomás
+  </footer>
+  <script src="js/alternar.js"></script>
+</body>
+</html>

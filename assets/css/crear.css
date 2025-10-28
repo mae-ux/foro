@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
+}
+
+body {
+  background: url('../img/biblioteca_fondo.png') no-repeat center top 60px / cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* ----- HEADER ----- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #006b4f;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  height: 55px;
+}
+
+/* ----- MAIN FORM ----- */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.form-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 60px 70px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  width: 600px;
+  max-width: 90%;
+}
+
+.form-box h2 {
+  color: #003b2b;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-box p {
+  color: #555;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: #003b2b;
+  font-weight: bold;
+  text-align: left;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #006b4f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #00513a;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #006b4f;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* ----- FOOTER ----- */
+.footer {
+  background-color: #003b2b;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+}

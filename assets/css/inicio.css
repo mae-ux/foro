@@ -1,0 +1,212 @@
+/* ===================== ESTILOS GENERALES ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* ===================== HEADER ===================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #006b4f;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 55px;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #003b2b;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #008061;
+}
+
+.navbar .active {
+  color: #008061;
+}
+
+.navbar .logout {
+  color: #a00;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===================== HERO ===================== */
+.hero {
+  background: url('../img/biblioteca_fondo.jpg') center/cover no-repeat;
+  height: 300px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+/* ===================== MAIN CONTENT ===================== */
+.main-content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.about {
+  margin-bottom: 40px;
+}
+
+.about h2 {
+  color: #006b4f;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.about p {
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ===================== CATEGORIES ===================== */
+.categories {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.categories h2 {
+  color: #006b4f;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+/* Grid flexible para las cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-decoration: none;
+  color: #003b2b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.card h3 {
+  color: #006b4f;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #444;
+  font-size: 15px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================== DESTACADO ===================== */
+.destacado {
+  background: #fff;
+  padding: 20px;
+  border-left: 5px solid #492580;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.destacado h3 {
+  color: #492580;
+  margin-bottom: 10px;
+}
+
+.destacado blockquote {
+  font-style: italic;
+  color: #333;
+}
+
+/* ===================== FOOTER ===================== */
+.footer {
+  background-color: #003b2b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+}
+
+/* Botón hamburguesa oculto por defecto */
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #003b2b;
+}
+
+/* Navbar móvil */
+@media (max-width: 767px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}

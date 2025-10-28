@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear tu Perfil de Estudiante</title>
+  <link rel="stylesheet" href="css/crear.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="img/logo_santotomas1.png" alt="Santo Tomás">
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="form-box">
+      <h2>Crea tu Perfil de Estudiante</h2>
+      <p>Completa los siguientes datos para unirte al foro</p>
+
+      <!-- Formulario POST al backend -->
+      <form action="/registrar" method="POST">
+        <label for="nombre">Nombre Completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+
+        <label for="usuario">Correo electrónico</label>
+        <input type="email" id="usuario" name="usuario" placeholder="ejemplo@tomasino.cl" required>
+
+        <label for="clave">Contraseña</label>
+        <input type="password" id="clave" name="clave" placeholder="Crea una contraseña segura" required>
+
+        <label for="idCarrera">Carrera</label>
+        <select id="idCarrera" name="idCarrera" required>
+          <option value="">Selecciona tu carrera...</option>
+          <% carreras.forEach(carrera => { %>
+            <option value="<%= carrera.idCarrera %>"><%= carrera.carrera %></option>
+          <% }) %>
+        </select>
+
+        <button type="submit" class="btn">Registrar</button>
+      </form>
+
+      <!-- Mostrar mensajes de error o éxito -->
+      <% if (error) { %>
+        <p class="error" style="color:red; margin-top:10px;"><%= error %></p>
+      <% } %>
+      <% if (exito) { %>
+        <p class="exito" style="color:green; margin-top:10px;"><%= exito %></p>
+      <% } %>
+
+      <p class="login-link">
+        ¿Ya tienes cuenta? <a href="/login">Inicia sesión aquí</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    © 2025 Voces Tomasinas - Foro Institucional Santo Tomás
+  </footer>
+</body>
+</html>
