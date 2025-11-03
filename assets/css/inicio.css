@@ -210,3 +210,64 @@ body {
     display: block;
   }
 }
+
+/* Cerrar sesion popup */
+.logout-popup {
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+  transition: all 0.2s ease;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logout-popup.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.logout-popup.hidden {
+  display: none;
+}
+
+.logout-popup p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-confirm,
+.btn-cancel {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-confirm {
+  background-color: #006b4f;
+  color: white;
+}
+
+.btn-confirm:hover {
+  background-color: #004d38;
+}
+
+.btn-cancel {
+  background-color: #ccc;
+}
+
+.btn-cancel:hover {
+  background-color: #999;
+}

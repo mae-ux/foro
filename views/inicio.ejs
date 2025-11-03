@@ -13,12 +13,12 @@
   <img src="img/logo_santotomas1.png" alt="Santo Tomás" class="logo">
   
   <nav class="navbar">
-    <a href="inicio.html" class="active">Inicio</a>
+    <a href="/inicio" class="active">Inicio</a>
     <a href="tematicas.html">Temáticas</a>
     <a href="recursos.html">Recursos</a>
     <a href="actividades.html">Actividades DAE</a>
     <a href="perfil.html">Mi Perfil</a>
-    <a href="login.html" class="logout">Cerrar sesión</a>
+    <a href="#" class="logout">Cerrar sesión</a>
   </nav>
 <div class="header-right">
     <button id="menu-btn" class="menu-btn">☰</button> <!-- botón hamburguesa -->
@@ -75,6 +75,15 @@
   <footer class="footer">
     © 2025 Voces Tomasinas - Foro Institucional Santo Tomás
   </footer>
+    <!-- Popup de confirmación -->
+  <div id="logout-popup" class="logout-popup hidden">
+    <p>¿Estás seguro/a de que quieres cerrar sesión?</p>
+    <div class="popup-buttons">
+      <button id="confirm-logout" class="btn-confirm">Sí</button>
+      <button id="cancel-logout" class="btn-cancel">No</button>
+    </div>
+  </div>
     <script src="js/alternar.js"></script>
+    <script src="js/logout-popup.js"></script>
 </body>
 </html>
